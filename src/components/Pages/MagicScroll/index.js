@@ -28,9 +28,6 @@ const MagicScroll = () => {
                 <Scene offset={80} >
                     <div className='sticky__example pink'>Sticky Example</div>
                 </Scene>
-                <Scene offset={1000} >
-                    <div className='sticky__example orange'>Sticky Example</div>
-                </Scene>
             </Controller>
 
         </div>
