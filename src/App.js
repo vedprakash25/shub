@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import { useEffect, useRef, useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-function App() {
+
+import Canvas from './components/Pages/Canvas';
+import Apple from './components/Pages/Apple';
+import MagicScroll from './components/Pages/MagicScroll';
+
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Canvas />} />
+          <Route path="canva" element={<Apple />} />
+          <Route path="mag" element={<MagicScroll />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
