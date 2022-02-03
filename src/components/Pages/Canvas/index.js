@@ -53,7 +53,9 @@ const Canvas = () => {
 
   return (
     <div className='canvas'>
-      <h1>Draw here</h1>
+      <a href='/apple'>Draw here</a>
+      <a href='/mag'>Magic Scroll</a>
+      <a href='/api'>API</a>
       <canvas
         onMouseDown={startDrawing}
         onMouseUp={finishDrawing}
