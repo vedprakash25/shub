@@ -1,26 +1,90 @@
 import React, { useEffect, useState } from 'react';
-
+import './api.css'
 
 const API = () => {
+    const [state, setState] = useState({})
+    const [names, setName] = useState()
+    const [filter, setFilter] = useState([])
 
-    const [state, setState] = useState('Load')
+    const { results } = state
+    console.log(results)
 
-    const load = () => {
-        // fetch("https://jsonplaceholder.typicode.com/users")
-        fetch("https://randomuser.me/api/?results=50")
+    const load = (e) => {
+        fetch(`https://randomuser.me/api/?results=100`)
             .then(response => response.json())
-            .then(data => {console.log(data.results[0])})
-            
+            .then(data => {
+                setState({ results: data.results })
+            })
     }
+
+    const handleFilter = () => {
+        
+        const filtered = results.filter((item) => {
+
+            const { name: { first, last } } = item
+            return first == names || last == names
+
+        })
+        setFilter(filtered)
+        console.log(filter.length)
+
+    }
+
+
+
+    useEffect(() => {
+        load()
+    }, [])
+
 
     return (
         <div className='Api'>
 
             <h1>API</h1>
 
-            <button onClick={load}>{state}</button>
+            <input value={names} onChange={(e) => setName(e.target.value)} />
+            <button onClick={handleFilter}>Filter</button>
 
+            <table className='main__table'>
+                <tr>
+                    <th>Name</th>
+                    <th>DOB</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Image</th>
+                </tr>
+
+                {
+                    results ?
+                        results.map((item, index) => {
+
+                            // console.log(item)
+                            const { name: { first, last: lasts }, cell, dob: { date, age }, email, gender, id, picture: { large }, phone } = item
+
+
+                            return (
+                                <tr key={index}>
+                                    {/* <td>{id}</td> */}
+                                    <td>{first} {lasts}</td>
+                                    <td>{date}</td>
+                                    <td>{age}</td>
+                                    <td>{gender}</td>
+                                    <td>{email}</td>
+                                    <td>{phone}</td>
+                                    <td><img src={large} /></td>
+                                </tr>
+                            )
+                        })
+                        :
+                        <h1>
+                            Loading
+                        </h1>
+                }
+            </table>
         </div>
+
     );
 }
 
