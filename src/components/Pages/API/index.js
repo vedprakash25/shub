@@ -3,11 +3,11 @@ import './api.css'
 
 const API = () => {
     const [state, setState] = useState({})
-    const [names, setName] = useState()
+    const [names, setName] = useState('')
     const [filter, setFilter] = useState([])
 
     const { results } = state
-    console.log(results)
+    // console.log(results)
 
     const load = (e) => {
         fetch(`https://randomuser.me/api/?results=100`)
@@ -18,15 +18,14 @@ const API = () => {
     }
 
     const handleFilter = () => {
-        
+
         const filtered = results.filter((item) => {
-
-            const { name: { first, last } } = item
-            return first == names || last == names
-
+            const { name: { first } } = item
+            return first == names
         })
-        setFilter(filtered)
-        console.log(filter.length)
+        console.log(filtered)
+        // setFilter(filtered)
+        // console.log(filter)
 
     }
 
