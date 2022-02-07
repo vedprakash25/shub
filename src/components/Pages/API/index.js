@@ -4,7 +4,7 @@ import './api.css'
 const API = () => {
     const [state, setState] = useState({})
     const [names, setName] = useState('')
-    const [filter, setFilter] = useState([])
+    const [filters, setFilter] = useState([])
 
     const { results } = state
     // console.log(results)
@@ -15,18 +15,19 @@ const API = () => {
             .then(data => {
                 setState({ results: data.results })
             })
+        console.log(results)
     }
 
     const handleFilter = () => {
 
-        const filtered = results.filter((item) => {
-            const { name: { first } } = item
-            return first == names
+        setFilter(() => {
+            results.filter((item) => {
+                const { name: { first } } = item
+                console.log(first)
+                return first == names
+            })
         })
-        console.log(filtered)
-        // setFilter(filtered)
-        // console.log(filter)
-
+        console.log(filters)
     }
 
 

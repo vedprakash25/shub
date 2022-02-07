@@ -7,6 +7,7 @@ import Canvas from './components/Pages/Canvas';
 import Apple from './components/Pages/Apple';
 import MagicScroll from './components/Pages/MagicScroll';
 import API from './components/Pages/API';
+import Array from './components/Pages/ArrayMethods';
 
 const App = () => {
 
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="apple" element={<Apple />} />
           <Route path="mag" element={<MagicScroll />} />
           <Route path="api" element={<API />} />
+          <Route path="arr" element={<Array />} />
         </Routes>
       </Router>
     </div>
