@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Nav from '../../Molecule/Nav';
 import './api.css'
 
 const API = () => {
@@ -39,7 +40,7 @@ const API = () => {
 
     return (
         <div className='Api'>
-
+            <Nav/>
             <h1>API</h1>
 
             <input value={names} onChange={(e) => setName(e.target.value)} />

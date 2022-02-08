@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Nav from '../../Molecule/Nav/index.js';
 import { arrayOfObj, arr1, arr2, arr3 ,calculate,calculateObj} from "./Function"
 
 const ArrayMethods = () => {
@@ -55,7 +56,7 @@ const ArrayMethods = () => {
 
     return (
         <div className='Api'>
-
+            <Nav/>
             <h1>Array</h1>
             <div style={{ display: 'flex', justifyContent: 'space-around' }}>
                 <div>

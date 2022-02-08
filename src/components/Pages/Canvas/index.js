@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import Nav from '../../Molecule/Nav';
 
 const Canvas = () => {
 
@@ -53,9 +54,7 @@ const Canvas = () => {
 
   return (
     <div className='canvas'>
-      <a href='/apple'>Draw here</a>
-      <a href='/mag'>Magic Scroll</a>
-      <a href='/api'>API</a>
+      <Nav/>
       <canvas
         onMouseDown={startDrawing}
         onMouseUp={finishDrawing}
