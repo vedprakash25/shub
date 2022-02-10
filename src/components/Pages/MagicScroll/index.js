@@ -1,12 +1,13 @@
 import React from 'react';
 import { Controller, Scene } from 'react-scrollmagic';
+import Nav from '../../Molecule/Nav';
 import "./magicStyles.css"
 
 
 const MagicScroll = () => {
     return (
         <div className='MagicScroll'>
-
+            <Nav/>
             <h1>MagicScroll</h1>
 
             <Controller>
