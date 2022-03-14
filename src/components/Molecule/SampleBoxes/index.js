@@ -12,17 +12,22 @@ const useStyles = makeStyles((theme) => ({
     slide: {
         height: '100vh',
         width: "100vw",
+        display:"flex",
+        justifyContent:"center",
+        alignItems:'center'
     }
 }))
-const SampleBoxes = ({ bgColor }) => {
+const SampleBoxes = (props) => {
 
     const classes = useStyles()
 
     return (
-        <Box className={classes.slide} style={{ background: `${bgColor}` }}></Box>
+        <Box className={classes.slide}
+        style={{ background: `${props.bgColor}` }} 
+        >
+            {props.children}
+        </Box>
     );
 }
 
-
 export default SampleBoxes;
-

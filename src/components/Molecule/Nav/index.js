@@ -6,7 +6,14 @@ const useStyles = makeStyles((theme) => ({
     nav: {
         position:'fixed',
         top:"0",
-        zIndex:"9999"
+        zIndex:"9999",
+        background:"black",
+        color:"white",
+        "& a":{
+          "&:hover":{
+            color:"grey"
+          }
+        }
     }
   }))
 
@@ -14,7 +21,7 @@ const Nav = () => {
   const classes = useStyles()
 
     return (
-        <div className={classes.nav} style={{}}>
+        <div className={classes.nav}>
             <a style={{margin:'0 10px'}} href='/'>Draw here</a>
             <a style={{margin:'0 10px'}} href='/mag'>Magic Scroll</a>
             <a style={{margin:'0 10px'}} href='/api'>API</a>

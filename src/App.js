@@ -14,8 +14,11 @@ import ScrollAnimation from './components/Pages/ScrollAnimation';
 import CustomSlider from './components/Pages/CustomSlider';
 import HorizontalPage from './components/Pages/HorizontalPage';
 
-const App = () => {
+import Aos from 'aos'
 
+Aos.init();
+
+const App = () => {
   return (
     <div className='App'>
       <Router>
