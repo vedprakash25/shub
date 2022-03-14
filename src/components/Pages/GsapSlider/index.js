@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import Nav from '../../Molecule/Nav';
 
-import { Box } from '@mui/material';
-import { makeStyles } from '@mui/styles';
 import { gsap, ScrollTrigger } from 'gsap/all';
+import { makeStyles } from '@mui/styles';
+import { Box } from '@mui/material';
 gsap.registerPlugin(ScrollTrigger)
 
 const useStyles = makeStyles((theme) => ({

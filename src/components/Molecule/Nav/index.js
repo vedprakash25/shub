@@ -1,9 +1,20 @@
 
+import { makeStyles } from '@mui/styles';
 import React from 'react';
 
+const useStyles = makeStyles((theme) => ({
+    nav: {
+        position:'fixed',
+        top:"0",
+        zIndex:"9999"
+    }
+  }))
+
 const Nav = () => {
+  const classes = useStyles()
+
     return (
-        <div className='Nav' style={{}}>
+        <div className={classes.nav} style={{}}>
             <a style={{margin:'0 10px'}} href='/'>Draw here</a>
             <a style={{margin:'0 10px'}} href='/mag'>Magic Scroll</a>
             <a style={{margin:'0 10px'}} href='/api'>API</a>
@@ -11,6 +22,8 @@ const Nav = () => {
             <a style={{margin:'0 10px'}} href='/slider'>Slider</a>
             <a style={{margin:'0 10px'}} href='/gsap'>Gsap</a>
             <a style={{margin:'0 10px'}} href='/scrollani'>ScrollAnimation</a>
+            <a style={{margin:'0 10px'}} href='/slidercustom'>slidercustom</a>
+            <a style={{margin:'0 10px'}} href='/horizontalPage'>HorizontalPage</a>
         </div>
     );
 }

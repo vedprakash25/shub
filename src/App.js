@@ -11,6 +11,8 @@ import Array from './components/Pages/ArrayMethods';
 import HorizontalSlider from './components/Pages/HorizontalSlider';
 import GsapSlider from './components/Pages/GsapSlider';
 import ScrollAnimation from './components/Pages/ScrollAnimation';
+import CustomSlider from './components/Pages/CustomSlider';
+import HorizontalPage from './components/Pages/HorizontalPage';
 
 const App = () => {
 
@@ -26,6 +28,8 @@ const App = () => {
           <Route path="slider" element={<HorizontalSlider />} />
           <Route path="gsap" element={<GsapSlider />} />
           <Route path="scrollani" element={<ScrollAnimation />} />
+          <Route path="slidercustom" element={<CustomSlider />} />
+          <Route path="horizontalPage" element={<HorizontalPage />} />
         </Routes>
       </Router>
     </div>

@@ -3,3 +3,33 @@
     text-align: center;
     padding: 0 1rem;
 }
+
+input{
+    border:1px solid black; 
+}
+
+img{
+    width: 80px;
+}
+
+button{
+    border: 2px solid #000000;
+    padding:3px 20px;
+    border-radius: 5px;
+}
+
+select{
+    border: 2px solid #000000;
+    padding:5px 20px;
+    border-radius: 5px;
+}
+
+option{
+    background-color: rgb(192, 122, 122);
+    color: aliceblue;
+}
+
+option:hover{
+    background-color: rgb(240, 104, 104);
+    color: aliceblue;
+}
