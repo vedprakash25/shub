@@ -12,7 +12,6 @@ const useStyles = makeStyles((theme) => ({
     splideBox: {
       height: '50vh',
       width: '50%',
-      border: '1px solid red'
     },
     splides: {
       width:"100%",

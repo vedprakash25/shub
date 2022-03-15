@@ -13,8 +13,10 @@ import GsapSlider from './components/Pages/GsapSlider';
 import ScrollAnimation from './components/Pages/ScrollAnimation';
 import CustomSlider from './components/Pages/CustomSlider';
 import HorizontalPage from './components/Pages/HorizontalPage';
+import GridLayout from './components/Pages/GridLayout';
 
 import Aos from 'aos'
+import CursorAnimation from './components/Pages/CursorAnimation';
 
 Aos.init();
 
@@ -33,6 +35,8 @@ const App = () => {
           <Route path="scrollani" element={<ScrollAnimation />} />
           <Route path="slidercustom" element={<CustomSlider />} />
           <Route path="horizontalPage" element={<HorizontalPage />} />
+          <Route path="grid" element={<GridLayout />} />
+          <Route path="curanimation" element={<CursorAnimation />} />
         </Routes>
       </Router>
     </div>

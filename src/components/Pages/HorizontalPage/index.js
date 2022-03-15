@@ -40,9 +40,9 @@ const HorizontalPage = () => {
   return (
     <div >
       <Nav />
-      <SampleBoxes bgColor={"pink"} >
+      {/* <SampleBoxes bgColor={"pink"} >
         <h1>Section  1</h1>
-      </SampleBoxes>
+      </SampleBoxes> */}
       <Box className={classes.outerWrapper}>
         <Box className={classes.wrapper}>
           <SampleBoxes bgColor={"pink"} >

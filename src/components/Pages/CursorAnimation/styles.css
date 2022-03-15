@@ -1,0 +1,59 @@
+.eyes-follow-tired{
+  background-color: black;  
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: none;
+  overflow: hidden;
+}
+
+.eyes{
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  /* overflow: hidden; */
+}
+.eye{
+  width: 100px;
+  height: 100px;
+  background-color: aliceblue ;
+  border-radius: 50%;
+  position: relative;
+  z-index: 10;
+}
+
+.eye:hover + #cursor{
+  border: 2px solid red;  
+  background-color: aqua;
+  /* display: none; */
+  /* cursor: none; */
+}
+
+.ball{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: grey;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border: 10px solid black;
+  transition: transform .4s ease-in-out;
+
+}
+
+.cursor{
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  position: absolute;
+  top:0%;
+  left:0%;
+  border: 10px solid grey;
+  cursor: none;
+  z-index: 1;
+}
