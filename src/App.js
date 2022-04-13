@@ -17,6 +17,8 @@ import GridLayout from './components/Pages/GridLayout';
 
 import Aos from 'aos'
 import CursorAnimation from './components/Pages/CursorAnimation';
+import Threejs from './components/Pages/Threejs';
+// import ThreeDview from './components/Pages/ThreeDview';
 
 Aos.init();
 
@@ -37,6 +39,8 @@ const App = () => {
           <Route path="horizontalPage" element={<HorizontalPage />} />
           <Route path="grid" element={<GridLayout />} />
           <Route path="curanimation" element={<CursorAnimation />} />
+          <Route path="threejs" element={<Threejs />} />
+          {/* <Route path="threeview" element={<ThreeDview />} /> */}
         </Routes>
       </Router>
     </div>

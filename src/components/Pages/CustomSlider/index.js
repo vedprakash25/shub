@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Nav from '../../Molecule/Nav';
 import "./customslider.css"
 import { BsArrowRightSquare, BsArrowLeftSquare } from 'react-icons/bs'
+import gsap from 'gsap/all';
 
 const sliderData = [
 
@@ -36,24 +37,22 @@ const CustomSlider = () => {
     const length = sliderData.length
 
 
-    let imgRef= useRef(current)
+    let imgRef = useRef(current)
 
     const nextSlide = () => {
         setCurrent(current === length - 1 ? 0 : current + 1);
+        imgRef.current.className='sfdf';
     }
     const prevSlide = () => {
         setCurrent(current === 0 ? length - 1 : current - 1);
     }
 
-    if (!Array.isArray(sliderData) || length <= 0) {
-        return (null)
-    }
+    // if (!Array.isArray(sliderData) || length <= 0) {
+    //     return (null)
+    // }
 
     console.log(current)
 
-    // useEffect(() => {
-
-    // }, [])
 
 
     return (
@@ -68,11 +67,11 @@ const CustomSlider = () => {
                 {
                     sliderData.map((item, index) => {
                         return (
-                            <div className={index === current ? "slide activeSlide" : "slide"} 
-                            onScroll={()=>setCurrent(index)}
-                            key={index}
+                            <div className={index === current ? "slide activeSlide" : "slide"}
+                                onScroll={() => setCurrent(index)}
+                                key={index}
                             >
-                                {index === current && <img src={item.image} alt={item.alt} ref={imgRef}/>}
+                                {index === current && <img src={item.image} alt={item.alt} ref={imgRef} />}
                             </div>
                         )
                     })
@@ -82,9 +81,9 @@ const CustomSlider = () => {
                     {
                         sliderData.map((item, index) => {
                             return (
-                                <li key={index} 
-                                className={index === current ? "pagination active" : "pagination "}
-                                onClick={()=>setCurrent(index)}
+                                <li key={index}
+                                    className={index === current ? "pagination active" : "pagination "}
+                                    onClick={() => setCurrent(index)}
                                 ></li>
                             )
                         })
