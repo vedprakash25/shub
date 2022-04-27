@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Navigation from '../Navigation';
 import './api.css'
 
 const API = () => {
@@ -38,6 +39,7 @@ const API = () => {
 
     return (
         <div className='Api'>
+            <Navigation />
 
             <h1>API</h1>
 

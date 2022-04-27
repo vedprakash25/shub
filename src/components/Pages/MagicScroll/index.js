@@ -1,11 +1,14 @@
 import React from 'react';
 import { Controller, Scene } from 'react-scrollmagic';
+import Navigation from '../Navigation';
 import "./magicStyles.css"
 
 
 const MagicScroll = () => {
     return (
         <div className='MagicScroll'>
+
+            <Navigation/>
 
             <h1>MagicScroll</h1>
 
