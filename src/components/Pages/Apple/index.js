@@ -1,14 +1,8 @@
 import React from 'react';
 import { useEffect, useRef, useState } from 'react';
-import Nav from '../../Molecule/Nav';
+import Navigation from '../Navigation';
 
 const Apple = () => {
-    return (
-        <div className='Apple'>
-            <Nav/>
-
-            <h1>Draw asadasdasdasdsa here</h1>
-            asasa
 
     const [x, setx] = useState([1, 2, 3, 4, 5, 1, 2, 3, 4, 5])
     const [findIt, setFindIt] = useState('')
