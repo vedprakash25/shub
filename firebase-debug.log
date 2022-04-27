@@ -1,0 +1,82 @@
+[debug] [2022-03-15T13:21:30.236Z] ----------------------------------------------------------------------
+[debug] [2022-03-15T13:21:30.238Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2022-03-15T13:21:30.238Z] CLI Version:   10.2.1
+[debug] [2022-03-15T13:21:30.238Z] Platform:      linux
+[debug] [2022-03-15T13:21:30.238Z] Node Version:  v16.13.1
+[debug] [2022-03-15T13:21:30.239Z] Time:          Tue Mar 15 2022 18:51:30 GMT+0530 (India Standard Time)
+[debug] [2022-03-15T13:21:30.239Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-03-15T13:21:30.244Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-03-15T13:21:30.244Z] > authorizing via signed-in user (ved.blacksof@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/win/Documents/AAAAAA/ved
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2022-03-15T13:21:55.313Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2022-03-15T13:21:55.314Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-03-15T13:21:55.544Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Tue, 15 Mar 2022 13:21:55 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-03-15T13:21:55.551Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects  
+ {"projectId":"react","name":"react"}
+[debug] [2022-03-15T13:21:57.131Z] <<< HTTP RESPONSE 400 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Tue, 15 Mar 2022 13:21:56 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1346","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-03-15T13:21:57.132Z] <<< HTTP RESPONSE BODY {"error":{"code":400,"message":"field [project_id] has issue [project_id must be at least 6 characters long]","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"project_id","description":"project_id must be at least 6 characters long"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2022-03-15T13:21:57.328Z] FirebaseError: HTTP Error: 400, field [project_id] has issue [project_id must be at least 6 characters long]
+    at module.exports (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:47:12)
+    at Request._callback (/usr/local/lib/node_modules/firebase-tools/lib/api.js:41:35)
+    at Request.self.callback (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:185:22)
+    at Request.emit (node:events:390:28)
+    at Request.emit (node:domain:475:12)
+    at Request.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1154:10)
+    at Request.emit (node:events:390:28)
+    at Request.emit (node:domain:475:12)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1076:12)
+    at Object.onceWrapper (node:events:509:28)
+    at IncomingMessage.emit (node:events:402:35)
+    at IncomingMessage.emit (node:domain:475:12)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
+[debug] [2022-03-15T13:22:05.330Z] ----------------------------------------------------------------------
+[debug] [2022-03-15T13:22:05.331Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2022-03-15T13:22:05.332Z] CLI Version:   10.2.1
+[debug] [2022-03-15T13:22:05.332Z] Platform:      linux
+[debug] [2022-03-15T13:22:05.332Z] Node Version:  v16.13.1
+[debug] [2022-03-15T13:22:05.332Z] Time:          Tue Mar 15 2022 18:52:05 GMT+0530 (India Standard Time)
+[debug] [2022-03-15T13:22:05.333Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-03-15T13:22:05.338Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-03-15T13:22:05.338Z] > authorizing via signed-in user (ved.blacksof@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/win/Documents/AAAAAA/ved
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
