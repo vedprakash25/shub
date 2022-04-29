@@ -1,0 +1,14 @@
+
+.box {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+  }
+  .box h2 {
+    font-size: 3em;
+  }
+  .box logo {
+    max-width: 300px;
+  }
+  
