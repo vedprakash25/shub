@@ -4,7 +4,7 @@ import Nav from "../../Molecule/Nav";
 
 import "./styles.css";
 
-const CursorAnimation = () => {
+const CursorAnimationDev = () => {
 
   let cusRef = useRef(null)
 
