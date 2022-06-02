@@ -1,5 +1,4 @@
-import './App.css';
-import { useEffect, useRef, useState } from 'react';
+
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
@@ -18,6 +17,8 @@ import GridLayout from './components/Pages/GridLayout';
 import Aos from 'aos'
 import CursorAnimation from './components/Pages/CursorAnimation';
 import Threejs from './components/Pages/Threejs';
+import TryTailwind from './components/Pages/TryTailwind';
+import GsapLayout from './components/Pages/GsapLayout';
 // import ThreeDview from './components/Pages/ThreeDview';
 
 Aos.init();
@@ -34,12 +35,14 @@ const App = () => {
           <Route path="arr" element={<Array />} />
           <Route path="slider" element={<HorizontalSlider />} />
           <Route path="gsap" element={<GsapSlider />} />
+          <Route path="gsapl" element={<GsapLayout />} />
           <Route path="scrollani" element={<ScrollAnimation />} />
           <Route path="slidercustom" element={<CustomSlider />} />
           <Route path="horizontalPage" element={<HorizontalPage />} />
           <Route path="grid" element={<GridLayout />} />
           <Route path="curanimation" element={<CursorAnimation />} />
           <Route path="threejs" element={<Threejs />} />
+          <Route path="tail" element={<TryTailwind />} />
           {/* <Route path="threeview" element={<ThreeDview />} /> */}
         </Routes>
       </Router>

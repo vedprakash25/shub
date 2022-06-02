@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
-import Navigation from '../Navigation';
-=======
 import Nav from '../../Molecule/Nav';
->>>>>>> 66812e14c6d0906433aee41052061da2c05eced9
 import './api.css'
 
 const API = () => {
@@ -61,12 +57,7 @@ const API = () => {
 
     return (
         <div className='Api'>
-<<<<<<< HEAD
-            <Navigation />
-
-=======
             <Nav />
->>>>>>> 66812e14c6d0906433aee41052061da2c05eced9
             <h1>API</h1>
 
             <input value={names} onChange={(e) => setName(e.target.value)} />

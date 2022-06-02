@@ -1,0 +1,38 @@
+.wrapper{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.firstWrapper{
+    background-color: #123456;
+    opacity: 0;
+}
+
+.secondWrapper{
+    background-color: #6c7588;
+}
+
+.thirdWrapper{
+    background-color: #7f5ab0;
+}
+
+.fourthWrapper{
+    background-color: #06203a;
+}
+
+.fifthWrapper{
+    background-color: #0c8c59;
+}
+
+h1{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    color: aliceblue;
+}
+

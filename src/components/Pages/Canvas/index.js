@@ -1,9 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-<<<<<<< HEAD
-import Navigation from '../Navigation';
-=======
 import Nav from '../../Molecule/Nav';
->>>>>>> 66812e14c6d0906433aee41052061da2c05eced9
 
 const Canvas = () => {
 
@@ -58,13 +54,7 @@ const Canvas = () => {
 
   return (
     <div className='canvas'>
-<<<<<<< HEAD
-    
-      <Navigation />
-
-=======
       <Nav/>
->>>>>>> 66812e14c6d0906433aee41052061da2c05eced9
       <canvas
         onMouseDown={startDrawing}
         onMouseUp={finishDrawing}

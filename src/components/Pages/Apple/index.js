@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect, useRef, useState } from 'react';
-import Navigation from '../Navigation';
+import Nav from '../../Molecule/Nav';
 
 const Apple = () => {
 
@@ -22,9 +22,9 @@ const Apple = () => {
     }
 
 
-    return (
+    return (                               
         <div className='Arrays'>
-            <Navigation />
+            <Nav />
             <h1>Array Method</h1>
 
             <h2>Array = [{
@@ -37,7 +37,7 @@ const Apple = () => {
                 <h2>Length = {filteredArray.length}</h2>
             </div>
 
-
+ 
 
             <div style={{ display: 'flex', justifyContent: 'space-around' }}>
                 <input value={replace} onChange={(e) => setReplace(e.target.value)} />
