@@ -28,6 +28,7 @@
     "react-spring": "^9.4.4",
     "react-three-fiber": "^6.0.13",
     "sass": "^1.49.9",
+    "swiper": "^8.4.2",
     "three": "^0.138.3",
     "web-vitals": "^2.1.4"
   },

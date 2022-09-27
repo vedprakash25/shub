@@ -27,10 +27,7 @@ const GsapSlider = () => {
 
   const classes = useStyles()
 
-
   const slideRef = useRef()
-
-
 
   const borderChange = (refs, scrollPosition) => {
     gsap.timeline(

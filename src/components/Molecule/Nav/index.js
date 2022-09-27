@@ -38,6 +38,7 @@ const Nav = () => {
       <a style={{ margin: '0 10px' }} href='/grid'>Grid Layout</a>
       <a style={{ margin: '0 10px' }} href='/curanimation'>Cursor Animation</a>
       <a style={{ margin: '0 10px' }} href='/threejs'>Threejs</a>
+      <a style={{ margin: '0 10px' }} href='/dirhover'>Dir Hover</a>
       {/* <a style={{ margin: '0 10px' }} href='/threeview'>ThreeDview</a> */}
     </div>
   );

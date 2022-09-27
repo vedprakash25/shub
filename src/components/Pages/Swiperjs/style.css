@@ -1,0 +1,21 @@
+.swiper_slide{
+    height: fit-content;
+    margin: 0 auto;
+    background-color: rgb(183, 209, 209);
+    text-align: center;
+    display: grid;
+    place-content: center;
+}
+.swiper_slide h1{
+    font-size: 2rem;    
+}
+
+.half__wrapper{
+    width: 50%;
+    height: 100%;
+}
+
+.main__wrapper{
+    display: flex;
+
+}

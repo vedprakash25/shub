@@ -17,4 +17,4 @@ const HorizontalSlider = () => {
   );
 }
 
-export default HorizontalSlider
+export default HorizontalSlider;
